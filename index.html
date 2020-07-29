@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<!-- User CSS -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!-- Title -->
+	<title>Список заявок</title>
+</head>
+
+<body>
+	<header class="container-fluid pt-4 text-left">
+		<p><a class="text-muted" href="hints.html">Подсказки</a></p>
+	</header>
+	<!-- container-fluid -->
+	<div class="container-fluid">
+
+		<!-- Шапка -->
+		<div class="heading">
+			<div class="title-1 inline">Все заявки </div>
+			<a href="new.html" class="btn btn-primary btn-sm">Создать заявку</a>
+			<button type="button" class="btn btn-primary" data-generate>Сгенерировать 5 товаров</button>
+		</div>
+		<!-- // Шапка -->
+
+		<!-- Фильтр -->
+		<form>
+			<div class="form-row">
+				<div class="col">
+				<!-- Фильтр имени -->
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Имя</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-client-name>
+							<option value='0' selected>Выберите...</option>
+						</select>
+					</div>
+				</div>
+				<!-- // Фильтр имени -->
+				<!-- Фильтр продуктов -->
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Продукт</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-goods>
+							<option value='0' selected>Выберите...</option>
+						</select>
+					</div>
+				</div>
+				<!-- // Фильтр продуктов -->
+				<!-- Фильтр статуса заявки -->
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Статус заявки</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-request-status>
+							<option value='0' selected>Выберите...</option>
+							<option value="1">Новая</option>
+							<option value="2">В работе</option>
+							<option value="3">Ожидается оплата</option>
+							<option value="4">Завершена</option>
+							<option value="5">Отказ</option>
+						</select>
+					</div>
+				</div>
+				<!-- // Фильтр статуса заявки -->
+				<!-- Фильтр статуса оплаты -->
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Статус оплаты</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-payment-status>
+							<option value='0' selected>Выберите...</option>
+							<option value='1'>Нет оплаты</option>
+							<option value='2'>Частично</option>
+							<option value='3'>Оплачено</option>
+							<option value='4'>Возврат</option>
+						</select>
+					</div>
+				</div>
+				<!-- // Фильтр статуса оплаты -->
+			</div>
+		</form>
+		<!-- // Фильтр -->
+
+		<table class="table fs-14">
+			<thead>
+				<tr>
+					<th style="width:150px;">ID</th>
+					<th>Имя</th>
+					<th>Товар</th>
+					<th>Цена</th>
+					<th>Статус</th>
+					<th>Оплата</th>
+				</tr>
+			</thead>
+			<tbody id='listViewer'>
+
+			</tbody>
+		</table>
+	</div>
+	<!-- // container-fluid -->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+	<script src="libs/popper/popper.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- User JS -->
+	<script src="js/request.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
